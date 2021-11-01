@@ -1,5 +1,5 @@
 {
-  "name": "carta-api-automation-report",
+  "name": "api-automation-report",
   "version": "1.0.0",
   "description": "API Automation with TypeScript and Cucumber",
   "main": "index.js",
