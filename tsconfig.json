@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "module": "commonJS",
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules/"]
+}

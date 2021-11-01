@@ -1,0 +1,27 @@
+{
+  "name": "carta-api-automation-report",
+  "version": "1.0.0",
+  "description": "API Automation with TypeScript and Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf ./reports/*",
+    "runAll": "cucumber-js ./tests/features/ --require ./tests/stepDefinitions/*.ts --format json:./reports/report.json --require-module ts-node/register",
+    "report": "node ./index.js",
+    "test": "npm-run-all runAll report --continue-on-error",
+    "singleFile": "cucumber-js --require ./tests/stepDefinitions/*.ts --format json:./reports/report.json --require-module ts-node/register"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "@types/chai": "^4.2.15",
+    "chai": "^4.3.3",
+    "chai-http": "^4.3.0",
+    "cucumber-html-reporter": "^5.3.0",
+    "i": "^0.3.6",
+    "npm": "^7.6.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1"
+  }
+}

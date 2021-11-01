@@ -1,0 +1,176 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "get-calls-for-weather-report;scenario-outline-name:-verify-name-attribute-corresponds-to-the-entered-city-name",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Scenario Outline name: Verify name attribute corresponds to the entered city name",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I call GET on \"weather?q=London&appid=\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1175000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I expect status code as \"200\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I verify the response to be \"London\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-calls-for-weather-report;verify-lat-&-lon-attribute-corresponds-to-the-entered-lat-and-lon",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Verify lat & lon attribute corresponds to the entered lat and lon",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I call GET on \"weather?lat=35.02&lon=139.01&appid=\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1139000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I expect status code as \"200\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I verify the lat attrbute response to be \"35.02\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I verify the lon attrbute response to be \"139.01\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-calls-for-weather-report;verify-city-name-by-zipcode",
+        "keyword": "Scenario Outline",
+        "line": 25,
+        "name": "Verify city name by ZipCode",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I call GET on \"weather?zip=94040,us&appid=\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1247000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I expect status code as \"200\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I verify the response to be \"Mountain View\"",
+            "match": {
+              "location": "tests/stepDefinitions/stepDefs.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "get-calls-for-weather-report",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Get calls for weather report",
+    "tags": [],
+    "uri": "tests/features/OpenWeather.feature"
+  }
+]
